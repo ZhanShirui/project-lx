@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    background: url(./images/1.jpeg) no-repeat center/cover;
+    /*  calc(视宽 + 定宽) */
+    height: calc(100vh + 60px); 
+    width: calc(100vw + 60px);
+    position: absolute;
+    z-index: -1;
+    /* 因为滤镜filter有白边，将背景图向外拓展30px */
+    top: -30px;
+    left: -30px;
+
+}
+
+.loading-text {
+    font-size: 50px;
+    color: white;
+}

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: skyblue;
+    font-family: sans-serif;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, .4);
+    padding: 40px 70px;
+    border-radius: 15px;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.btn{
+    cursor: pointer;
+    width: 100%;
+    background-color: lightblue;
+    padding: 15px;
+    margin: 5px 0 ;
+    font-size: 16px;
+    border: 0;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(.98);
+}
+.container a{
+    text-decoration: none;
+    font-weight: bold;
+    color: lightblue;
+}
+.tip {
+    margin-top: 25px;
+}
+.form-control{
+    position: relative;
+    width: 300px;
+    margin: 20px 0 40px;
+}
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    width: 100%;
+    display: block;
+    padding: 18px 5px 3px;
+    font-size: 20px;
+    color: rgb(185, 215, 226);
+}
+
+.form-control input:focus{
+    outline: 0;
+    /* border-bottom-color: lightblue; */
+}
+
+/* valid 验证通过则样式生效 */
+.form-control input:valid{
+    border-bottom-color: lightblue;
+}
+
+.form-control label{
+    position: absolute;
+    left: 0;
+    top: 11px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-control label span {
+    display: inline-block;
+    transition: all .2s cubic-bezier(.68,-.55,.265,1.55);
+}
+
+/* 上跳动画 */
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    transform: translateY(-18px);
+    color: lightblue;
+}
